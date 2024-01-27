@@ -6,15 +6,6 @@
             "id": "52572b63-4bbe-417e-966e-ed18bbf177b4",
             "actions": [
                 {
-                    "name": "ToggleDebug",
-                    "type": "Button",
-                    "id": "4c969ffe-4283-4546-bdd0-50c2a57410a3",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Movement",
                     "type": "Value",
                     "id": "9e24f166-eaac-4bfa-836c-4240522815f5",
@@ -31,20 +22,36 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Stabilize",
+                    "type": "Button",
+                    "id": "c86a8e73-3f39-4a89-9e4c-333f559dba2e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ToggleDebug",
+                    "type": "Button",
+                    "id": "1d22b641-a511-40ca-ab6e-939ddd627d1c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Return",
+                    "type": "Button",
+                    "id": "89a68600-8b05-468e-9d77-5332f18ff23a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
-                {
-                    "name": "",
-                    "id": "b0d4334c-27b8-4c1f-ac52-61e31c471f00",
-                    "path": "<Keyboard>/backquote",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ToggleDebug",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
                 {
                     "name": "3D Vector",
                     "id": "e5f45495-2f80-4653-ac90-7456ba87d804",
@@ -130,6 +137,67 @@
                     "processors": "",
                     "groups": "",
                     "action": "Interact",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9c8b8778-5c85-4c16-9c0f-cf846c57e26f",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Stabilize",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5ec27d6d-e940-4067-940b-07d7b8a02551",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleDebug",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1dade68c-4701-4320-8c36-cb1d54d610f4",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Return",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Console",
+            "id": "06e89863-fa17-4cee-9aa5-a5c5c88ab755",
+            "actions": [
+                {
+                    "name": "ToggleDebug",
+                    "type": "Button",
+                    "id": "f8c4a121-6e96-4230-acee-d67b6c4cc551",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f2347b0d-cb3e-4656-8d2b-ebe5c40ff4ac",
+                    "path": "<Keyboard>/backquote",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ToggleDebug",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

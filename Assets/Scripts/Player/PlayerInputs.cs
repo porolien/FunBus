@@ -24,4 +24,9 @@ public class PlayerInputs : MonoBehaviour
     {
         _playerMain.playerInteract.Interact();
     }
+
+    public void OnStabilize()
+    {
+        _playerMain.plateMain.plateBalancer.IsStabilized();
+    }
 }
