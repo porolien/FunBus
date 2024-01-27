@@ -16,7 +16,7 @@ public class PlateInventory : MonoBehaviour
 
     private void Start()
     {
-        transform.parent.GetComponent<PlayerMain>().plateInventory = this;
+        GetComponent<PlateMain>().plateInventory = this;
     }
     public void TakeObject(GameObject _newProbs)
     {

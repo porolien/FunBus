@@ -49,4 +49,9 @@ public class PlayerMovement : MonoBehaviour
         this.rotate = new Vector3(this.x, 0, 0);
         _playerMain.playercam.MoveCameY(rotate);
     }
+
+    public void ConsoleChangeSpeed(float speed)
+    {
+        _speed = speed;
+    }
 }
