@@ -1,9 +1,19 @@
 fileFormatVersion: 2
-guid: 33707ea640f81474d84f57fc3c8545c5
+guid: 1296a97a0d255a746b1f2a821b720115
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GeneralFlatPalette
+    second: {fileID: 2100000, guid: 935ee8be60268b447af6adf5f9ec9b6f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: GeneralTransparentPalette
+    second: {fileID: 2100000, guid: 25d3b0f41b2701947839804f9dc05e70, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
