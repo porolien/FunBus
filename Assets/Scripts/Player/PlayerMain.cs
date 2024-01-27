@@ -8,4 +8,5 @@ public class PlayerMain : MonoBehaviour
     public PlayerMovement playerMovement;
     public PlayerInteract playerInteract;
     public PlateInventory plateInventory;
+    public PlayerCam playercam;
 }
