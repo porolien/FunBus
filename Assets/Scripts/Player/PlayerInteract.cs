@@ -36,7 +36,7 @@ public class PlayerInteract : MonoBehaviour
             if (raycastHit.transform.tag == "Selectable")
             {
                 Debug.Log("selectable");
-                _playerMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
+                _playerMain.plateMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
             }
         }
         
