@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -35,6 +36,7 @@ public class PlayerInteract : MonoBehaviour
             if (raycastHit.transform.tag == "Selectable")
             {
                 Debug.Log("selectable");
+                _playerMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
             }
         }
         

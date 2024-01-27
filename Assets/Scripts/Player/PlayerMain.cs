@@ -7,4 +7,5 @@ public class PlayerMain : MonoBehaviour
     public PlayerInputs playerInputs;
     public PlayerMovement playerMovement;
     public PlayerInteract playerInteract;
+    public PlateInventory plateInventory;
 }
