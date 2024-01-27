@@ -44,7 +44,9 @@ public class PlayerMovement : MonoBehaviour
     {
         this.y = Input.GetAxis("Mouse X");
         this.x = Input.GetAxis("Mouse Y");
-        this.rotate = new Vector3(this.x, this.y * this.sensitivity, 0);
+        this.rotate = new Vector3(0, this.y * this.sensitivity, 0);
         this.transform.eulerAngles = this.transform.eulerAngles - this.rotate;
+        this.rotate = new Vector3(this.x, 0, 0);
+        _playerMain.playercam.MoveCameY(rotate);
     }
 }
