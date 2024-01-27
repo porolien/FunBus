@@ -17,63 +17,63 @@ public class ConsoleForBuild : MonoBehaviour
     [SerializeField]
     PlateBalancerUI _plateBalancerUI;
 
-    public static DebugCommand<int> SET_SPEED_CHARACTER;
-    public static DebugCommand<int> SET_SPEED_GR;
-    public static DebugCommand<int> SET_DELAY_TO_FALL_GR;
-    public static DebugCommand<int> SET_DELAY_PATERN_P1_MIN_PR;
-    public static DebugCommand<int> SET_DELAY_PATERN_P1_MAX_PR;
-    public static DebugCommand<int> SET_DELAY_PATERN_P2_MIN_PR;
-    public static DebugCommand<int> SET_DELAY_PATERN_P2_MAX_PR;
-    public static DebugCommand<int> SET_SPEED_PATERN_P2_MAX_PR;
-    public static DebugCommand<int> SET_SPEED_PATERN_P2_MIN_PR;
-    public static DebugCommand<int> SET_SPEED_PATERN_P1_MAX_PR;
-    public static DebugCommand<int> SET_SPEED_PATERN_P1_MIN_PR;
+    public static DebugCommand<float> SET_SPEED_CHARACTER;
+    public static DebugCommand<float> SET_SPEED_GR;
+    public static DebugCommand<float> SET_DELAY_TO_FALL_GR;
+    public static DebugCommand<float> SET_DELAY_PATERN_P1_MIN_PR;
+    public static DebugCommand<float> SET_DELAY_PATERN_P1_MAX_PR;
+    public static DebugCommand<float> SET_DELAY_PATERN_P2_MIN_PR;
+    public static DebugCommand<float> SET_DELAY_PATERN_P2_MAX_PR;
+    public static DebugCommand<float> SET_SPEED_PATERN_P2_MAX_PR;
+    public static DebugCommand<float> SET_SPEED_PATERN_P2_MIN_PR;
+    public static DebugCommand<float> SET_SPEED_PATERN_P1_MAX_PR;
+    public static DebugCommand<float> SET_SPEED_PATERN_P1_MIN_PR;
 
     public List<object> commandList;
 
     private void Awake()
     {
-        SET_SPEED_CHARACTER = new DebugCommand<int>("set_speed_character", "change la speed du joueur", "set_speed <speed_amount>", (x) => 
+        SET_SPEED_CHARACTER = new DebugCommand<float>("set_speed_character", "change la speed du joueur", "set_speed <speed_amount>", (x) => 
         {
             _playerMovement.ConsoleChangeSpeed(x);
         });
-        SET_SPEED_GR = new DebugCommand<int>("set_speed_gr", "change la speed du grand rectangle", "set_speed <speed_amount>", (x) =>
+        SET_SPEED_GR = new DebugCommand<float>("set_speed_gr", "change la speed du grand rectangle", "set_speed <speed_amount>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeSpeedGR(x);
         });
-        SET_DELAY_TO_FALL_GR = new DebugCommand<int>("set_delay_to_fall_gr", "change le délai avant que le grand rectangle ne chute", "set_delay <delay_account>", (x) =>
+        SET_DELAY_TO_FALL_GR = new DebugCommand<float>("set_delay_to_fall_gr", "change le délai avant que le grand rectangle ne chute", "set_delay <delay_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeDelayGR(x);
         });
-        SET_DELAY_PATERN_P1_MAX_PR = new DebugCommand<int>("set_delay_patern_p1_max_pr", "change le max de temps qu'il faut pour changer de patern sur le patern numéro 1 du petit rectangle", "set_delay_max <max_delay_account>", (x) =>
+        SET_DELAY_PATERN_P1_MAX_PR = new DebugCommand<float>("set_delay_patern_p1_max_pr", "change le max de temps qu'il faut pour changer de patern sur le patern numéro 1 du petit rectangle", "set_delay_max <max_delay_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeDelayMaxPRP1(x);
         });
-        SET_DELAY_PATERN_P1_MIN_PR = new DebugCommand<int>("set_delay_patern_p1_min_pr", "change le min de temps qu'il faut pour changer de patern sur le patern numéro 1 du petit rectangle", "set_delay_min <min_delay_account>", (x) =>
+        SET_DELAY_PATERN_P1_MIN_PR = new DebugCommand<float>("set_delay_patern_p1_min_pr", "change le min de temps qu'il faut pour changer de patern sur le patern numéro 1 du petit rectangle", "set_delay_min <min_delay_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeDelayMinPRP1(x);
         });
-        SET_DELAY_PATERN_P2_MAX_PR = new DebugCommand<int>("set_delay_patern_p2_max_pr", "change le max de temps qu'il faut pour changer de patern sur le patern numéro 2 du petit rectangle", "set_delay_max <max_delay_account>", (x) =>
+        SET_DELAY_PATERN_P2_MAX_PR = new DebugCommand<float>("set_delay_patern_p2_max_pr", "change le max de temps qu'il faut pour changer de patern sur le patern numéro 2 du petit rectangle", "set_delay_max <max_delay_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeDelayMaxPRP2(x);
         });
-        SET_DELAY_PATERN_P2_MIN_PR = new DebugCommand<int>("set_delay_patern_p2_min_pr", "change le min de temps qu'il faut pour changer de patern sur le patern numéro 2 du petit rectangle", "set_delay_min <min_delay_account>", (x) =>
+        SET_DELAY_PATERN_P2_MIN_PR = new DebugCommand<float>("set_delay_patern_p2_min_pr", "change le min de temps qu'il faut pour changer de patern sur le patern numéro 2 du petit rectangle", "set_delay_min <min_delay_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeDelayMinPRP2(x);
         });
-        SET_SPEED_PATERN_P2_MAX_PR = new DebugCommand<int>("set_speed_patern_p2_max_pr", "change le max de vitesse sur le patern numéro 2 du petit rectangle", "set_speed_max <max_speed_account>", (x) =>
+        SET_SPEED_PATERN_P2_MAX_PR = new DebugCommand<float>("set_speed_patern_p2_max_pr", "change le max de vitesse sur le patern numéro 2 du petit rectangle", "set_speed_max <max_speed_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeSpeedMaxPRP2(x);
         });
-        SET_SPEED_PATERN_P2_MIN_PR = new DebugCommand<int>("set_speed_patern_p2_min_pr", "change le min de vitesse sur le patern numéro 2 du petit rectangle", "set_speed_min <min_speed_account>", (x) =>
+        SET_SPEED_PATERN_P2_MIN_PR = new DebugCommand<float>("set_speed_patern_p2_min_pr", "change le min de vitesse sur le patern numéro 2 du petit rectangle", "set_speed_min <min_speed_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeSpeedMinPRP2(x);
         });
-        SET_SPEED_PATERN_P1_MAX_PR = new DebugCommand<int>("set_speed_patern_p1_max_pr", "change le max de vitesse sur le patern numéro 1 du petit rectangle", "set_speed_max <max_speed_account>", (x) =>
+        SET_SPEED_PATERN_P1_MAX_PR = new DebugCommand<float>("set_speed_patern_p1_max_pr", "change le max de vitesse sur le patern numéro 1 du petit rectangle", "set_speed_max <max_speed_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeSpeedMaxPRP1(x);
         });
-        SET_SPEED_PATERN_P1_MIN_PR = new DebugCommand<int>("set_speed_patern_p1_min_pr", "change le min de vitesse sur le patern numéro 1 du petit rectangle", "set_speed_min <min_speed_account>", (x) =>
+        SET_SPEED_PATERN_P1_MIN_PR = new DebugCommand<float>("set_speed_patern_p1_min_pr", "change le min de vitesse sur le patern numéro 1 du petit rectangle", "set_speed_min <min_speed_account>", (x) =>
         {
             _plateBalancerUI.ConsoleChangeSpeedMinPRP1(x);
         });
@@ -136,9 +136,9 @@ public class ConsoleForBuild : MonoBehaviour
                 {
                     (commandList[i] as DebugCommand).Invoke();
                 }
-                else if (commandList[i] as DebugCommand<int> != null)
+                else if (commandList[i] as DebugCommand<float> != null)
                 {
-                    (commandList[i] as DebugCommand<int>).Invoke(int.Parse(properties[1]));
+                    (commandList[i] as DebugCommand<float>).Invoke(float.Parse(properties[1]));
                 }
             }
         }
