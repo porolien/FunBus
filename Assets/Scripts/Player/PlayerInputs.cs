@@ -19,4 +19,9 @@ public class PlayerInputs : MonoBehaviour
     {
         _playerMain.playerMovement.Move(value.Get<Vector3>());
     }
+
+    public void OnInteract()
+    {
+        _playerMain.playerInteract.Interact();
+    }
 }
