@@ -27,6 +27,30 @@ public class PlateBalancerUI : MonoBehaviour
     [SerializeField]
     float _speed;
 
+    [SerializeField]
+    float _speedPRP1Min;
+
+    [SerializeField]
+    float _speedPRP1Max;
+
+    [SerializeField]
+    float _speedPRP2Min;
+
+    [SerializeField]
+    float _speedPRP2Max;
+
+    [SerializeField]
+    float _delayPRP1Min;
+
+    [SerializeField]
+    float _delayPRP1Max;
+
+    [SerializeField]
+    float _delayPRP2Min;
+
+    [SerializeField]
+    float _delayPRP2Max;
+
     float _speedBalanceUI;
 
     [SerializeField]
@@ -95,7 +119,7 @@ public class PlateBalancerUI : MonoBehaviour
 
     void ChooseABalancePatern()
     {
-        if( Random.Range(0, 2)==0 ) 
+        if( Random.Range(0, 2) == 0 ) 
         {
             BalanceMoveToADirection();
         }
@@ -108,18 +132,18 @@ public class PlateBalancerUI : MonoBehaviour
 
     void BalanceMoveToADirection()
     {
-        _speedBalanceUI = _speed / Random.Range(0.8f, 2f);
-        if(Random.Range(0, 2)==0 ) 
+        _speedBalanceUI = _speed / Random.Range(_speedPRP1Min, _speedPRP1Max);
+        if(Random.Range(0, 2) == 0 ) 
         {
             _speedBalanceUI = -_speedBalanceUI;
         }
-        _delayToChangePatern = Random.Range(0.5f, 2f);
+        _delayToChangePatern = Random.Range(_delayPRP1Min, _delayPRP1Max);
     }
 
     void BalanceImpulse()
     {
-        _speedBalanceUI = _speed * 10;
-        _delayToChangePatern = 0.1f;
+        _speedBalanceUI = _speed * Random.Range(_speedPRP2Min, _speedPRP2Max);
+        _delayToChangePatern = Random.Range(_delayPRP2Min, _delayPRP2Max);
     }
 
     IEnumerator APatern()
@@ -138,5 +162,46 @@ public class PlateBalancerUI : MonoBehaviour
         {
             UIToLimit.anchoredPosition = new Vector2(UIToLimit.anchoredPosition.x, _playerUIPosMin);
         }
+    }
+
+    public void ConsoleChangeSpeedGR(float speed)
+    {
+        _speed = speed;
+    }
+    public void ConsoleChangeDelayGR(float delay)
+    {
+        plateBalancer._delayGR = delay;
+    }
+    public void ConsoleChangeSpeedMinPRP1(float speed)
+    {
+        _speedPRP1Min = speed;
+    }
+    public void ConsoleChangeSpeedMaxPRP1(float speed)
+    {
+        _speedPRP1Max = speed;
+    }
+    public void ConsoleChangeSpeedMinPRP2(float speed)
+    {
+        _speedPRP2Min = speed;
+    }
+    public void ConsoleChangeSpeedMaxPRP2(float speed)
+    {
+        _speedPRP2Max = speed;
+    }
+    public void ConsoleChangeDelayMinPRP1(float delay)
+    {
+        _delayPRP1Min = delay;
+    }
+    public void ConsoleChangeDelayMaxPRP1(float delay)
+    {
+        _delayPRP1Max = delay;
+    }
+    public void ConsoleChangeDelayMinPRP2(float delay)
+    {
+        _delayPRP2Min = delay;
+    }
+    public void ConsoleChangeDelayMaxPRP2(float delay)
+    {
+        _delayPRP2Max = delay;
     }
 }

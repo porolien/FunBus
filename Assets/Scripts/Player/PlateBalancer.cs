@@ -10,6 +10,8 @@ public class PlateBalancer : MonoBehaviour
     [SerializeField]
     GameObject _allUI;
 
+    public float _delayGR;
+
     float _playerStabilizeValue;
     float _plateStabilizeValue;
     PlateBalancerUI _plateBalancerUI;
@@ -67,7 +69,7 @@ public class PlateBalancer : MonoBehaviour
     {
         //Permet d'arrêter de faire baisser la bar le temps qu'on appuie sur espace
         _isStabilized = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(_delayGR);
         _isStabilized = false;
     }
 
