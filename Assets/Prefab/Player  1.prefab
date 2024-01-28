@@ -372,6 +372,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0
   sensitivity: -10
+  clipsStep:
+  - {fileID: 8300000, guid: 45a6f655bb086e448a196bfaeaf63d2f, type: 3}
+  - {fileID: 8300000, guid: 2a87244c070d50e4cb99a12fb8cb7617, type: 3}
+  - {fileID: 8300000, guid: cfc53221cbbbe1c4380f5a38fc45799f, type: 3}
+  - {fileID: 8300000, guid: f05fe33023d20d542882fb9b3deaf6aa, type: 3}
+  - {fileID: 8300000, guid: b1a6c98e5aeab674caf502438f1b69ea, type: 3}
+  - {fileID: 8300000, guid: 094ee6f273a1269478d58944dac414ac, type: 3}
 --- !u!114 &951252707786034059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -396,6 +403,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31d9ee0f278dc4e46b4161cce86b3eb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  point: {fileID: 0}
+  alcoolSFX:
+  - {fileID: 8300000, guid: 87d03c6aab552aa44ac20327cdf5c039, type: 3}
+  - {fileID: 8300000, guid: 03d4a4a407a1d264a935d184a84019c8, type: 3}
+  - {fileID: 8300000, guid: 42604d74e1d4e2a42aa6374d2f840dcb, type: 3}
+  - {fileID: 8300000, guid: 8c0617b0055715f498f4b2c11f9e8934, type: 3}
+  - {fileID: 8300000, guid: 0ff7cf044d32c9f4c9c587c98d6ad680, type: 3}
+  - {fileID: 8300000, guid: 4e03ee6e3549ea341922dbc83ae595c9, type: 3}
+  - {fileID: 8300000, guid: c6bb5a03b7350094e811138742ee27cf, type: 3}
+  - {fileID: 8300000, guid: fb88361ca5194dc428b5e73119afd3f8, type: 3}
+  - {fileID: 8300000, guid: 8cf038125c4d45d43b23b043ab28aff2, type: 3}
+  - {fileID: 8300000, guid: d2b361670a8190f428341cca2a725d33, type: 3}
+  - {fileID: 8300000, guid: 21e2c797f12e5564ba6e2a0e13656e99, type: 3}
+  - {fileID: 8300000, guid: e0daede52b6e4eb45a26ae781af1ef27, type: 3}
 --- !u!54 &1051484723878016707
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -635,16 +656,16 @@ MonoBehaviour:
   _playerUI: {fileID: 0}
   _balanceUI: {fileID: 0}
   _newPosition: {x: 0, y: 0}
-  _speed: 200
-  _speedPRP1Min: 0.8
-  _speedPRP1Max: 2
-  _speedPRP2Min: 5
-  _speedPRP2Max: 10
-  _delayPRP1Min: 0.5
-  _delayPRP1Max: 2
-  _delayPRP2Min: 0.1
-  _delayPRP2Max: 0.2
-  _delayToChangePatern: 0
+  _speed: 400
+  _speedPRP1Min: 0.55
+  _speedPRP1Max: 0.8
+  _speedPRP2Min: 0.2
+  _speedPRP2Max: 0.3
+  _delayPRP1Min: 0.4
+  _delayPRP1Max: 0.6
+  _delayPRP2Min: 0.6
+  _delayPRP2Max: 0.8
+  _delayToChangePatern: 0.05
   plateBalancer: {fileID: 0}
 --- !u!114 &5092335950831658288
 MonoBehaviour:
@@ -850,7 +871,7 @@ Transform:
   m_GameObject: {fileID: 8908072068596804025}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.1447427, y: -1.138, z: -0.23799229}
+  m_LocalPosition: {x: 0.1447427, y: -1.138, z: -0.086}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

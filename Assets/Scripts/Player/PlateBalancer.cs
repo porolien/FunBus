@@ -20,6 +20,9 @@ public class PlateBalancer : MonoBehaviour
 
     public bool isBalancing;
 
+    [SerializeField]
+    AudioClip glassBreak;
+
     void Start()
     {
         GetComponent<PlateMain>().plateBalancer = this;
@@ -88,6 +91,7 @@ public class PlateBalancer : MonoBehaviour
         _allUI.SetActive(false);
         _plateBalancerUI.StopAllCoroutines();
         CustomerManager.Instance.PlayerMistake();
+        SFXManager.Instance.NewSFXPlay(glassBreak);
     }
 
 }

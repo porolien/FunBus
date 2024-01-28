@@ -17,6 +17,9 @@ public class PlayerMovement : MonoBehaviour
     public float sensitivity = -10f;
     private Vector3 rotate;
 
+    [SerializeField]
+    List<AudioClip> clipsStep = new List<AudioClip>();
+    bool waitNewStep;
 
     private void Start()
     {
@@ -33,6 +36,10 @@ public class PlayerMovement : MonoBehaviour
     {
         transform.Translate(_direction * _speed * Time.deltaTime);
         MoveCamera();
+        if((_direction.x != 0 || _direction.z != 0) && !waitNewStep)
+        {
+            StartCoroutine(StepSFX());
+        }
     }
 
     public void Move(Vector3 newDirection)
@@ -53,5 +60,13 @@ public class PlayerMovement : MonoBehaviour
     public void ConsoleChangeSpeed(float speed)
     {
         _speed = speed;
+    }
+
+    IEnumerator StepSFX()
+    {
+        waitNewStep = true;
+        SFXManager.Instance.NewSFXPlay(clipsStep[Random.Range(0, clipsStep.Count)]);
+        yield return new WaitForSeconds(1.2f);
+        waitNewStep = false;
     }
 }
