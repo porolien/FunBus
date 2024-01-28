@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8dd3dc4e21eda874988fd3ff800ac26e,
         type: 3}
       propertyPath: m_Name
-      value: Drive
+      value: NPC_Drive
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 8dd3dc4e21eda874988fd3ff800ac26e,
         type: 3}
@@ -76,6 +76,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1547126650109136575}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8dd3dc4e21eda874988fd3ff800ac26e,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -2380520034138956930}
   m_SourcePrefab: {fileID: 100100000, guid: 8dd3dc4e21eda874988fd3ff800ac26e, type: 3}
 --- !u!1 &3449887419323069626 stripped
 GameObject:
@@ -104,3 +108,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.58662033, y: 1.3454361, z: 0.8026085}
   m_Center: {x: 0.039578915, y: 0.6745634, z: 0.29943466}
+--- !u!114 &-2380520034138956930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3449887419323069626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 610d8b1314e75d3438b49f9d30089220, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hasADemand: 0
+  Wrong: {fileID: 715780471726147257, guid: 369f71a50f776bc4d88d476975348174, type: 3}
+  Correct: {fileID: 414235827045248329, guid: 0964ada14784ef144b5d966c43c9b13c, type: 3}
