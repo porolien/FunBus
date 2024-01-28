@@ -12,7 +12,7 @@ public class Customer : MonoBehaviour
     public CustomerIcon actualIcon;
 
     public ParticleSystem Wrong;
-    public GameObject Correct;
+    public ParticleSystem Correct;
 
     public void CreateDemand()
     {
