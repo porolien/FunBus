@@ -29,4 +29,22 @@ public class PlayerInputs : MonoBehaviour
     {
         _playerMain.plateMain.plateBalancer.IsStabilized();
     }
+
+    public void OnSwapSelection(InputValue value)
+    {
+        int directionSelected = 1;
+        if(value.Get<Vector2>().y != 0)
+        {
+            if (value.Get<Vector2>().y < 0)
+            {
+                directionSelected = -1;
+            }
+            _playerMain.plateMain.plateInventory.SelectASelectable(directionSelected);
+        }
+    }
+
+    public void OnDrop()
+    {
+        _playerMain.plateMain.plateInventory.DropSelectedProbs();
+    }
 }
