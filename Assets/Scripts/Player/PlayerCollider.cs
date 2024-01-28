@@ -13,7 +13,10 @@ public class PlayerCollider : MonoBehaviour
     {
         if(collision.gameObject.tag == "Human")
         {
-            _playerMain.plateMain.plateBalancer.Balancing();
+            if(_playerMain.plateMain.plateInventory._numberOfProbs > 0)
+            {
+                _playerMain.plateMain.plateBalancer.Balancing();
+            }
         }
     }
 }
