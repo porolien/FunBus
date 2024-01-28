@@ -13,6 +13,10 @@ public class CustomerManager : MonoBehaviour
 
     public List<GameObject> allIcon = new List<GameObject>();
 
+    public PlayerMain playerMain;
+
+    float errorNumber;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -48,5 +52,10 @@ public class CustomerManager : MonoBehaviour
             customerWithoutDemand[randomCustomer].CreateDemand();
             customerWithoutDemand.Remove(customerWithoutDemand[randomCustomer]);
         }
+    }
+
+    public void PlayerMistake()
+    {
+        errorNumber++;
     }
 }

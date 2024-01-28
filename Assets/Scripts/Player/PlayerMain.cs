@@ -9,4 +9,9 @@ public class PlayerMain : MonoBehaviour
     public PlayerInteract playerInteract;
     public PlateMain plateMain;
     public PlayerCam playercam;
+
+    private void Start()
+    {
+        CustomerManager.Instance.playerMain = this;
+    }
 }

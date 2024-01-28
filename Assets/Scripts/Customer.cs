@@ -9,16 +9,34 @@ public class Customer : MonoBehaviour
 
     SelectableType typeDemand;
 
+    public CustomerIcon actualIcon;
+
+    public ParticleSystem Wrong;
+    public GameObject Correct;
     public void CreateDemand()
     {
-        typeDemand = CustomerManager.Instance.allIcon[Random.Range(0, CustomerManager.Instance.allIcon.Count)].GetComponent<CustomerIcon>().typeDemand;
+        actualIcon = Instantiate(CustomerManager.Instance.allIcon[Random.Range(0, CustomerManager.Instance.allIcon.Count)].GetComponent<CustomerIcon>());
+        typeDemand = actualIcon.typeDemand;
+        actualIcon.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
+        hasADemand = true;
     }
 
     public void DemandFinish(SelectableType typeReceive)
     {
-        if(typeReceive == typeDemand)
+        if (hasADemand)
         {
-
+            if (typeReceive == typeDemand)
+            {
+                //Correct.Play();
+            }
+            else
+            {
+                CustomerManager.Instance.PlayerMistake();
+                //Wrong.Play();
+            }
+            CustomerManager.Instance.customerWithoutDemand.Add(this);
+            hasADemand = false;
+            Destroy(actualIcon.gameObject);
         }
     }
 }

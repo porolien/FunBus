@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -10,6 +11,7 @@ public class PlayerInteract : MonoBehaviour
 {
     private RaycastHit raycastHit;
     private PlayerMain _playerMain;
+    public GameObject point;
     void Start()
     {
          _playerMain = GetComponent<PlayerMain>();
@@ -24,6 +26,7 @@ public class PlayerInteract : MonoBehaviour
 
     void FindSelectable()
     {
+        //point.transform.position = Camera.main.ScreenToViewportPoint(Input.mousePosition);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out raycastHit, 20)) { }
         
@@ -41,11 +44,12 @@ public class PlayerInteract : MonoBehaviour
 
             if (raycastHit.transform.tag == "Human")
             {
-                Debug.Log("selectable");
-                _playerMain.plateMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
+                if (raycastHit.transform.GetComponent<Customer>().hasADemand)
+                {
+                    _playerMain.plateMain.plateInventory.PutObject(raycastHit.transform.gameObject);
+                }
             }
         }
-        
     }
 }
    

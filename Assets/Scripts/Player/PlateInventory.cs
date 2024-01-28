@@ -30,6 +30,7 @@ public class PlateInventory : MonoBehaviour
     {
         GetComponent<PlateMain>().plateInventory = this;
     }
+
     public void TakeObject(GameObject newProbs)
     {
         if(_numberOfProbs < _maxOfProbs)
@@ -60,7 +61,7 @@ public class PlateInventory : MonoBehaviour
             {
                 transformUse.Add(placeOfNewObject);
             }
-            
+            Debug.Log(placeOfNewObject.position);
             _newProbs.transform.parent = placeOfNewObject;
             _newProbs.transform.position = new Vector3 (_newProbs.transform.parent.position.x, _newProbs.transform.parent.position.y + (_newProbs.transform.localScale.y/2), _newProbs.transform.parent.position.z) ;
             _numberOfProbs++;
@@ -72,10 +73,29 @@ public class PlateInventory : MonoBehaviour
         
     }
 
-    public void PutObject(GameObject _newProbs)
+    public void PutObject(GameObject _human)
     {
-        probs.Remove(_newProbs);
-        _numberOfProbs--;
+        if(_numberOfProbs > 0)
+        {
+            if(_numberOfProbs > 1)
+            {
+                GameObject objet = probs[_probsSelected];
+                _human.GetComponent<Customer>().DemandFinish(objet.GetComponent<SelectableMain>().typeDemand);
+                probs.Remove(objet);
+                _numberOfProbs--;
+                Destroy(objet);
+            }
+            else
+            {
+                GameObject objet = probs[0];
+                _human.GetComponent<Customer>().DemandFinish(objet.GetComponent<SelectableMain>().typeDemand);
+                probs.Remove(objet);
+                _numberOfProbs--;
+                Destroy(objet);
+            }
+            
+        }
+        
     }
 
     public void SelectASelectable(int _theSelectable)
