@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.057253413, g: 0.026394684, b: 0.068214186, a: 1}
+  m_IndirectSpecularColor: {r: 0.057121076, g: 0.026352327, b: 0.06809861, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16337,16 +16337,11 @@ PrefabInstance:
       propertyPath: _allUI
       value: 
       objectReference: {fileID: 926867354}
-    - target: {fileID: 7539021884574967923, guid: fbd9e2d6a06169945943178c34a76362,
+    - target: {fileID: 4993390157497422687, guid: fbd9e2d6a06169945943178c34a76362,
         type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.086
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _speed
-      value: 400
-      objectReference: {fileID: 0}
+      propertyPath: glassBreak
+      value: 
+      objectReference: {fileID: 8300000, guid: 2eec2f0935d99ff43ae515cb30138e80, type: 3}
     - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
         type: 3}
       propertyPath: _playerUI
@@ -16357,121 +16352,11 @@ PrefabInstance:
       propertyPath: _balanceUI
       value: 
       objectReference: {fileID: 71827791}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _delayPRP1Max
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _delayPRP1Min
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _delayPRP2Max
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _delayPRP2Min
-      value: 0.6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _speedPRP1Max
-      value: 0.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _speedPRP1Min
-      value: 0.55
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _speedPRP2Max
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _speedPRP2Min
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: _delayToChangePatern
-      value: 0.05
-      objectReference: {fileID: 0}
     - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
         type: 3}
       propertyPath: point
       value: 
       objectReference: {fileID: 78370492}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.size
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: 87d03c6aab552aa44ac20327cdf5c039, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: 03d4a4a407a1d264a935d184a84019c8, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: 42604d74e1d4e2a42aa6374d2f840dcb, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[3]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8c0617b0055715f498f4b2c11f9e8934, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[4]
-      value: 
-      objectReference: {fileID: 8300000, guid: 0ff7cf044d32c9f4c9c587c98d6ad680, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[5]
-      value: 
-      objectReference: {fileID: 8300000, guid: 4e03ee6e3549ea341922dbc83ae595c9, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[6]
-      value: 
-      objectReference: {fileID: 8300000, guid: c6bb5a03b7350094e811138742ee27cf, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[7]
-      value: 
-      objectReference: {fileID: 8300000, guid: fb88361ca5194dc428b5e73119afd3f8, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[8]
-      value: 
-      objectReference: {fileID: 8300000, guid: 8cf038125c4d45d43b23b043ab28aff2, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[9]
-      value: 
-      objectReference: {fileID: 8300000, guid: d2b361670a8190f428341cca2a725d33, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[10]
-      value: 
-      objectReference: {fileID: 8300000, guid: 21e2c797f12e5564ba6e2a0e13656e99, type: 3}
-    - target: {fileID: 8605861211722969731, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: alcoolSFX.Array.data[11]
-      value: 
-      objectReference: {fileID: 8300000, guid: e0daede52b6e4eb45a26ae781af1ef27, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -74343,79 +74228,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1001 &1669837973
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2471426822956083183, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_Name
-      value: 'Player '
-      objectReference: {fileID: 0}
-    - target: {fileID: 2471426822956083183, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 3.4127636
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.69
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 4.5432334
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6922819604732623246, guid: 40a9ead986100c0458041a469f1fa8a2,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 40a9ead986100c0458041a469f1fa8a2, type: 3}
 --- !u!43 &1672841907
 Mesh:
   m_ObjectHideFlags: 0
@@ -99412,7 +99224,6 @@ SceneRoots:
   - {fileID: 629511368}
   - {fileID: 228254581}
   - {fileID: 469177029}
-  - {fileID: 1669837973}
   - {fileID: 803676697}
   - {fileID: 474465036}
   - {fileID: 8871010564212774029}
