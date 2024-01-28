@@ -12,7 +12,7 @@ public class PlateInventory : MonoBehaviour
 
     public List<GameObject> probs = new List<GameObject>();
 
-    int _numberOfProbs;
+    public int _numberOfProbs;
 
     int _probsSelected;
 
