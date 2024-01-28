@@ -9,10 +9,10 @@ public class Customer : MonoBehaviour
 
     SelectableType typeDemand;
 
-    public CustomerIcon actualIcon;
+    CustomerIcon actualIcon;
 
     public ParticleSystem Wrong;
-    public GameObject Correct;
+    public ParticleSystem Correct;
     public void CreateDemand()
     {
         actualIcon = Instantiate(CustomerManager.Instance.allIcon[Random.Range(0, CustomerManager.Instance.allIcon.Count)].GetComponent<CustomerIcon>());
