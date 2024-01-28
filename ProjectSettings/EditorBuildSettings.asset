@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scene/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scene/Aure.unity
     guid: e991b7f8211c09042a82df1cee281a38
+  - enabled: 1
+    path: Assets/Scene/aureblocking.unity
+    guid: bbd82f28cff28ea4d8dcbae9a415d0fa
   m_configObjects: {}

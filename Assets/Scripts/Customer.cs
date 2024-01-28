@@ -13,18 +13,21 @@ public class Customer : MonoBehaviour
 
     public ParticleSystem Wrong;
     public GameObject Correct;
+
     public void CreateDemand()
     {
         actualIcon = Instantiate(CustomerManager.Instance.allIcon[Random.Range(0, CustomerManager.Instance.allIcon.Count)].GetComponent<CustomerIcon>());
         typeDemand = actualIcon.typeDemand;
         actualIcon.transform.position = new Vector3(transform.position.x, transform.position.y + 3, transform.position.z);
         hasADemand = true;
+        SFXManager.Instance.NewSFXPlay(CustomerManager.Instance.bubbleBegin);
     }
 
     public void DemandFinish(SelectableType typeReceive)
     {
         if (hasADemand)
         {
+            SFXManager.Instance.NewSFXPlay(CustomerManager.Instance.bubbleEnd);
             if (typeReceive == typeDemand)
             {
                 //Correct.Play();

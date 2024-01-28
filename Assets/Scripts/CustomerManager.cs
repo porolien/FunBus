@@ -17,6 +17,9 @@ public class CustomerManager : MonoBehaviour
 
     float errorNumber;
 
+    public AudioClip bubbleBegin;
+    public AudioClip bubbleEnd;
+
     private void Awake()
     {
         if (_instance != null && _instance != this)
@@ -57,5 +60,9 @@ public class CustomerManager : MonoBehaviour
     public void PlayerMistake()
     {
         errorNumber++;
+        if(errorNumber >= 5) 
+        {
+            Debug.Log("GameOver");
+        }
     }
 }
