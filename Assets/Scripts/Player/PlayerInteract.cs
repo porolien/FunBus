@@ -12,6 +12,8 @@ public class PlayerInteract : MonoBehaviour
     private RaycastHit raycastHit;
     private PlayerMain _playerMain;
     public GameObject point;
+
+    public List<AudioClip> alcoolSFX = new List<AudioClip>();
     void Start()
     {
          _playerMain = GetComponent<PlayerMain>();
@@ -39,6 +41,7 @@ public class PlayerInteract : MonoBehaviour
             if (raycastHit.transform.tag == "Selectable")
             {
                 Debug.Log("selectable");
+                SFXManager.Instance.NewSFXPlay(alcoolSFX[Random.Range(0, alcoolSFX.Count)]);
                 _playerMain.plateMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
             }
 
@@ -46,6 +49,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 if (raycastHit.transform.GetComponent<Customer>().hasADemand)
                 {
+                    SFXManager.Instance.NewSFXPlay(alcoolSFX[Random.Range(0, alcoolSFX.Count)]);
                     _playerMain.plateMain.plateInventory.PutObject(raycastHit.transform.gameObject);
                 }
             }

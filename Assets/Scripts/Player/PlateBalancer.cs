@@ -87,6 +87,7 @@ public class PlateBalancer : MonoBehaviour
         isBalancing = false;
         _allUI.SetActive(false);
         _plateBalancerUI.StopAllCoroutines();
+        CustomerManager.Instance.PlayerMistake();
     }
 
 }
