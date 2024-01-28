@@ -38,6 +38,12 @@ public class PlayerInteract : MonoBehaviour
                 Debug.Log("selectable");
                 _playerMain.plateMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
             }
+
+            if (raycastHit.transform.tag == "Human")
+            {
+                Debug.Log("selectable");
+                _playerMain.plateMain.plateInventory.TakeObject(raycastHit.transform.gameObject);
+            }
         }
         
     }
