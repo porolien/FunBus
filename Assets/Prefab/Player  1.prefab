@@ -638,6 +638,7 @@ MonoBehaviour:
   _allUI: {fileID: 0}
   _delayGR: 0.1
   isBalancing: 0
+  glassBreak: {fileID: 8300000, guid: 2eec2f0935d99ff43ae515cb30138e80, type: 3}
 --- !u!114 &8355671370657252925
 MonoBehaviour:
   m_ObjectHideFlags: 0

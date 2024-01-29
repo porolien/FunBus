@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.057121076, g: 0.026352327, b: 0.06809861, a: 1}
+  m_IndirectSpecularColor: {r: 0.057123214, g: 0.026355524, b: 0.068101086, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -16337,11 +16337,6 @@ PrefabInstance:
       propertyPath: _allUI
       value: 
       objectReference: {fileID: 926867354}
-    - target: {fileID: 4993390157497422687, guid: fbd9e2d6a06169945943178c34a76362,
-        type: 3}
-      propertyPath: glassBreak
-      value: 
-      objectReference: {fileID: 8300000, guid: 2eec2f0935d99ff43ae515cb30138e80, type: 3}
     - target: {fileID: 8355671370657252925, guid: fbd9e2d6a06169945943178c34a76362,
         type: 3}
       propertyPath: _playerUI

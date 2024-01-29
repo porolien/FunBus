@@ -30,12 +30,14 @@ public class Customer : MonoBehaviour
             SFXManager.Instance.NewSFXPlay(CustomerManager.Instance.bubbleEnd);
             if (typeReceive == typeDemand)
             {
-                //Correct.Play();
+                Correct.Play();
             }
             else
             {
                 CustomerManager.Instance.PlayerMistake();
-                //Wrong.Play();
+                
+                Wrong.Play();
+
             }
             CustomerManager.Instance.customerWithoutDemand.Add(this);
             hasADemand = false;
